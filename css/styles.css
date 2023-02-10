@@ -122,18 +122,21 @@ button {
 .menu-style:focus::after {
   content: "";
   bottom: 0px;
-  display: block;
+  display: flex;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4px;
+
   border-radius: 4px;
   background-color: var(--pressed-state-cl);
 }
-/* .menu-link::after {
-  content: "";
-  display: block;
-  border-radius: 4px;
-  background-color: var(--pressed-state-cl); */
-/* } */
+.menu {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+
 .adress-row {
   display: flex;
   align-items: center;
@@ -151,7 +154,6 @@ button {
 }
 .heder {
   border-bottom: 1px solid var(--accent-cl);
-  padding: 24px 0px;
 }
 .hero {
   background-color: var(--dark-cl);
@@ -221,10 +223,12 @@ button {
   gap: 24px;
 }
 .benefits-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--light-cl);
   border-radius: 4px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  height: 112px;
   margin-bottom: 8px;
 }
 .benefits-svg {
@@ -340,7 +344,7 @@ button {
 }
 .customers-link:hover,
 .customers-link:focus {
-  color: var(--hover-bt);
+  color: var(--pressed-state-cl);
   border: 1px solid var(--pressed-state-cl);
 }
 .log-svg {
@@ -382,8 +386,14 @@ button {
 .portfolio-btn:focus {
   color: var(--white-cl);
   background-color: var(--pressed-state-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--pressed-state-cl);
 }
-.portfolio-images-row {
+.portfolio-images:hover,
+.portfolio-images:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .caption-text {
   padding: 32px 16px;
